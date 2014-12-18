@@ -163,6 +163,29 @@ void Server::processNetworkEvents()
                     }
                 }
             }
+            if (aux == NET::ReadyToSkip)
+            {
+                int auxPersonNumber;
+                packet >> auxPersonNumber;
+                personMap.at(auxPersonNumber).readyToSkip = true;
+
+                bool everyoneReady = true;
+                for (unsigned int i = 0; i < personCount; ++i)
+                {
+                    if (!personMap.at(i).readyToSkip)
+                    {
+                        everyoneReady = false;
+                    }
+                }
+                if (everyoneReady)
+                {
+                    return_packet << NET::ReadyToSkip;
+                    for (auto &return_client : clients)
+                    {
+                        return_client->send(return_packet);
+                    }
+                }
+            }
         }
     }
 }

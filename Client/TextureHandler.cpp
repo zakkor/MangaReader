@@ -2,5 +2,5 @@
 
 TextureHandler::TextureHandler()
 {
-    player.loadFromFile("player.png");
+//    player.loadFromFile("player.png");
 }

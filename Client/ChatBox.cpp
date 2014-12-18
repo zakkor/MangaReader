@@ -2,14 +2,15 @@
 
 ChatBox::ChatBox()
 {
-    bgBox.setFillColor(sf::Color(183, 183, 183));
-    box.setFillColor(sf::Color::White);
-    text.setColor(sf::Color::Black);
+    box.setFillColor(sf::Color(255, 255, 255, 70));
+
+    text.setColor(sf::Color::White);
     text.setString("");
     text.setCharacterSize(14);
 
-    bgBox.setSize(sf::Vector2f(400, 100));
-    bgBox.setPosition(0, 300);
+    bgBox.setFillColor(sf::Color(255, 255, 255, 70));
+    bgBox.setSize(sf::Vector2f(200, 200));
+    bgBox.setPosition(1280-200, 720-200);
 
     box.setSize(sf::Vector2f(bgBox.getSize().x - 5, bgBox.getSize().y - 5));
     box.setPosition(bgBox.getPosition().x + 3, bgBox.getPosition().y + 3);

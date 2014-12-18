@@ -6,6 +6,7 @@ namespace NET
         PersonDisconnected,
         PersonTalked,
         PersonRenamed,
+        ReadyToSkip,
         Count
     };
 }

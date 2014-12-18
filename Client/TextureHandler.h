@@ -4,5 +4,5 @@ class TextureHandler
 {
 public:
     TextureHandler();
-    sf::Texture bg, player;
+//    sf::Texture bg, player;
 };
