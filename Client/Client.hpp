@@ -20,15 +20,10 @@ private:
 
     void startClient();
 
-    std::string IntToString ( int number );
-    string copyFromCharToChar(char char1, char char2, string str);
-
 
     //-------------------------------//
 
     sf::RenderWindow window;
-
-    sf::View mangoView;
 
     TextureHandler textureHandler;
     sf::Font font;
@@ -38,7 +33,6 @@ private:
     ChatBox chatBox;
     MainPane mainPane;
 
-    sf::Texture texture;
 
     short personCount;
 
@@ -47,13 +41,6 @@ private:
     bool inFocus;
 
     bool currentlyTyping;
-
-    float zoomFactor;
-
-    bool scrolling;
-    sf::Vector2f origMousePosition;
-
-    std::string currentManga;
 
     std::map<short, Person> personMap;
 };

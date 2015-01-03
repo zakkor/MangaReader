@@ -15,8 +15,6 @@ public:
 
     void addNewMessage(ChatMessage chatMessage);
 
-    sf::Sprite mango;
-    sf::RectangleShape messageArea, bgArea;
-    sf::Texture texture;
+    sf::RectangleShape box;
     std::vector <ChatMessage> messages;
 };

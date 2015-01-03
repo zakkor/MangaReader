@@ -2,5 +2,4 @@
 
 Person::Person()
 {
-    readyToSkip = false;
 }

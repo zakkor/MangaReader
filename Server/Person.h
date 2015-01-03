@@ -9,5 +9,4 @@ public:
     Person();
 
     std::string name;
-    bool readyToSkip;
 };
